@@ -26,7 +26,7 @@ public class UserRestController {
 			//Enregistre user
 			
 			User savedUser = userManagerService.signup(user.getLogin(), user.getPassword());
-			System.out.println("user id : " + savedUser);
+			System.out.println("user id : " + savedUser.getLogin());
 			return savedUser;
 			
 		}
