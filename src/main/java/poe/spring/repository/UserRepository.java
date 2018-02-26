@@ -8,5 +8,4 @@ import poe.spring.domain.User;
 @Repository // Permet d'acceder à la base de donnée
 public interface UserRepository extends CrudRepository<User, Long> {
 
-
 }

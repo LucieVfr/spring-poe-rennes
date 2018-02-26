@@ -1,3 +1,4 @@
+
 package poe.spring;
 
 import static org.assertj.core.api.Assertions.assertThat;

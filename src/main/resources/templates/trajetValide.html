@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Trajet validé</title>
+<link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+<div class="div">
+Votre trajet est validé! <br/><br/>
+
+<a th:href="@{/formulaireTrajet}">
+		<input class="btn" name="null"
+			value="Enregistre un autre trajet" tabindex="5" type="submit" />
+			<br/><br/>
+</a>
+	<a th:href="@{/}">
+		<input class="btn" name="null"
+			value="Retour a l'accueil" tabindex="5" type="submit" />
+	</a>
+</div>
+</body>
+</html>

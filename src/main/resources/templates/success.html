@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Okayyy</title>
+<link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+<div class="div">
+<h1>Bravo <span th:text="${name}"/> !
+</h1>
+
+	<a th:href="@{/inscription}">
+		<input name="null"
+			value="Inscris-toi" tabindex="5" type="submit" />
+	</a>
+	<br/><br/>
+		<a th:href="@{/}">
+		<input class="btn" name="null"
+			value="Retour a l'accueil" tabindex="5" type="submit" />
+	</a>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Inscription</title>
+
+<link rel="stylesheet" href="/style.css"/>
+
+</head>
+<body>
+
+
+		<form action="#" th:action="@{/inscription}" method="post">
+
+		<div class="div">
+		Login: <br/>
+		<input name="login" value="Lucie" size="25"
+			tabindex="1" type="text" />
+			<span th:text="${message}" /><br/><br/>
+		Mot de passe: <br/>
+		<input name="password" value="guillaume" size="25"
+			tabindex="1" type="password"/><br /><br />
+			
+			<input class="btn" name="inscription"
+			value="Inscription" tabindex="5" type="submit" />
+		</div>	
+		</form>	
+
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Proposer trajet</title>
+<link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+
+
+		<form action="#" th:action="@{/formulaireTrajet}" method="post">
+
+		<div class="div">
+		Conducteur : <select name="stringIdConducteur" id="stringIdConducteur">
+		
+           <option th:each="user : ${users}" th:value="${user.id}"><span th:text="${user.login}"/></option>
+
+
+
+
+
+       </select>
+
+
+			<br/><br/>
+		
+		Ville de Départ : <input name="villeDepart" value="Rennes" size="25"
+			tabindex="1" type="text" />
+			<br/><br/>			
+			
+		Ville d'arrivée : <input name="villeArrivee" value="Paris" size="25"
+			tabindex="1" type="text"/><br /><br />
+			
+		Date de départ : <input name="date" value="10/12/2020" size="25"
+			tabindex="1" type="date"/><br /><br />
+			
+		Prix : <input name="prix" value="150" size="25"
+			tabindex="1" type="number" min="0" max="300"/>Euros<br /><br />
+			
+		Nombre de place : <input name="nombrePlace" value="2" size="25"
+			tabindex="1" type="number" min="1" max="6"/><br /><br />
+		
+		
+			<input class="btn" name="trajet"
+			value="Proposer le trajet" tabindex="5" type="submit" />
+		</div>	
+		</form>	
+
+</body>
+</html>

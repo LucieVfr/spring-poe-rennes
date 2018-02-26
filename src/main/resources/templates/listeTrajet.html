@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Liste trajets</title>
+<link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+
+<center>
+<div >
+	<div class="list">
+	<a th:href="@{/}">
+		<input class="btn" name="null"
+			value="Retour a l'accueil" tabindex="5" type="submit" />
+	</a> <br/><br/>
+	
+	
+	<form action="#" th:action="@{/listeTrajet}" th:object="${trajets}"
+              method="get">
+              Conducteur:	              
+        <select name="stringIdConducteur" id="stringIdConducteur">		
+           <option value="0"><span th:text="Tous"/></option>
+           <option th:each="user : ${users}" th:value="${user.id}"><span th:text="${user.login}"/></option>
+       </select>			
+		<br />
+		
+              Ville de départ:              
+        <select name="villeDepart" id="villeDepart">
+           <option value="0"><span th:text="Toutes"/></option>		
+           <option th:each="trajet : ${toutLesTrajets}" th:value="${trajet.villeDepart}"><span th:text="${trajet.villeDepart}"/></option>
+       </select>			
+		<br />
+		<input class="btn" name="listerTrajets"
+			value="Lancer la recherche" tabindex="5" type="submit" />
+		</form>	
+	
+	
+	</div>
+
+
+	<div class="list" th:each="trajet : ${trajets}">
+	
+		<h2>Trajet <span th:text="${trajet.villeDepart}"/>-<span th:text="${trajet.villeArrivee}"/></h2>		
+		Le trajet est proposé par : <span th:text="${trajet.user.login}"/>.<br/>
+		Départ le : <span th:text="${trajet.date}"/>.<br/>
+		Il reste <span th:text="${trajet.nombrePlace}"/> place(s) de disponibles. <br/> 
+		Le trajet coute: <span th:text="${trajet.prix}"/>€.
+	</div>
+	
+
+	
+
+</div>
+</center>
+
+</body>
+</html>

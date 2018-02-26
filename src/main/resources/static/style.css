@@ -1,0 +1,77 @@
+.div {
+	position: absolute; /* postulat de départ */
+  	top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  	transform: translate(-50%, -50%); 
+  	
+	background-color: #fee7b6;
+	font-size: 13px;
+	line-height: 1.5;
+    color: #000000;
+    
+    text-align: center;
+    
+    line-height: 1.5;
+    margin: 8px;
+    padding: 25px;
+    
+    
+    font-size: medium;
+    font-weight: bold;
+    
+    border: 2px solid #000000;
+    box-shadow: 3px 3px 0px #e0e0e0; 
+    border-radius: 10px;
+}
+
+.list {
+	float : center;	
+	/* height : 15%; */
+  	width : 50%;
+  	
+	background-color: #fee7b6;
+	font-size: 13px;
+	line-height: 1.5;
+    color: #000000;
+    
+    text-align: center;    
+    line-height: 1.5;
+    margin: 8px;
+    padding: 25px;
+    
+    
+    font-size: medium;
+    font-weight: bold;
+    
+    border: 2px solid #000000;
+    box-shadow: 3px 3px 0px #e0e0e0; 
+    border-radius: 10px;
+}
+
+.list:hover{
+	border: 4px solid #000000;
+	margin: 15px;
+    padding: 30px;
+}
+
+a { text-decoration: none; }
+
+.btn {
+	 margin: 4px;
+     padding: 10px;
+     border-radius: 10px;
+     background-color: #fed1b6;
+     color: #000000;
+}
+
+.btn:hover{
+	background-color: #ffb5b5;
+	color: #000000;
+}
+
+.btn:active {
+	margin: 3px;
+    padding: 8px;	
+}
+
+
+

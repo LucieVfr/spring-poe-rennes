@@ -1,9 +1,12 @@
 package poe.spring.domain;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User {
@@ -11,6 +14,9 @@ public class User {
 @Id
 @GeneratedValue(strategy=GenerationType.AUTO)
 private Long id;
+
+@OneToMany(mappedBy="user")
+private List<Trajet> trajets;
 
 private String login;
 private String password;
@@ -32,6 +38,12 @@ public String getPassword() {
 }
 public void setPassword(String password) {
 	this.password = password;
+}
+public List<Trajet> getTrajets() {
+	return trajets;
+}
+public void setTrajets(List<Trajet> trajets) {
+	this.trajets = trajets;
 }
 
 }

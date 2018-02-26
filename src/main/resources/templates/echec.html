@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+<div class="div">
+<h1>Echec</h1>
+Le login : <span th:text="${login}"/>, n'est pas correct.
+	<br/><br/>
+	<a th:href="@{/}">
+		<input class="btn" name="null"
+			value="Accueil" tabindex="5" type="submit" />
+	</a>
+</div>
+
+</body>
+</html>

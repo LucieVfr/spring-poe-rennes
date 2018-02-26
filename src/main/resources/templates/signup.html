@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Donne moi ton nom</title>
+
+<link rel="stylesheet" href="/style.css"/>
+
+</head>
+<body>
+	<div class="div">
+		
+		<form action="#" th:action="@{/signup}" th:object="${nom}"
+              method="post">
+
+		
+		
+		<input name="userName" value="Lucie" size="25"
+			tabindex="1" type="text" />
+		<br />
+		<input class="btn" name="Save"
+			value="Envoie ton nom" tabindex="5" type="submit" />
+		</form>	
+	</div>
+</body>
+</html>

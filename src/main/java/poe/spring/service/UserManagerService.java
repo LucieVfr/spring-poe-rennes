@@ -70,5 +70,16 @@ public class UserManagerService {
 		User user = userReposiroty.findOne(id);
 		return user;
 	}
+	
+	public User chercherLog(String login) {
+		User user = null;
+		List<User> users = (List<User>) userReposiroty.findAll();
+		for (User userListe : users) {
+			if (userListe.getLogin().equals(login)) {
+				user = userListe;
+			}
+		}		
+		return user;
+	}
 
 }

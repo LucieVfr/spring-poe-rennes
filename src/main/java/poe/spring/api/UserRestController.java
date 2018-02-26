@@ -1,7 +1,6 @@
 package poe.spring.api;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,20 +29,25 @@ public class UserRestController {
 			return savedUser;
 			
 		}
-		
-		@GetMapping(path = "/list")
-		public List<User> lister() {
-			List<User> users = userManagerService.lister();
-			return users;
-		}
-		
-		@GetMapping(path = "/one")
-		public User chercher(Long id) {
+			
+			@GetMapping(path = "/list")
+			public List<User> lister() {
+				List<User> users = userManagerService.lister();
+				return users;
+			}
+			
+			@GetMapping(path = "/one")
+			public User chercher(Long id) {
 			User user = userManagerService.chercher(id);
 			//System.out.println(" User Login : " + user.getLogin() + "\n User Password : "  + user.getPassword());
 			return user;
 		}
-		
+			@GetMapping(path = "/oneLog")
+			public User chercherLog(String login) {
+			User user = userManagerService.chercherLog(login);
+			return user;
+		}
+
 		
 		@GetMapping(path = "/delete")
 		public void delete(Long id) {

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Validation</title>
+<link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+<div class="div">
+<h1>Vous êtes bien enregistré!</h1>
+Merci de votre confiance <span th:text="${login}"/> ! <br/>
+Votre mot de passe est : <span th:text="${password}"/>, Veuillez le gardez précieusement. <br/><br/>
+	
+	Clique sur le bouton pour ajouter un trajet! <br/><br/>
+	<a th:href="@{/formulaireTrajet}">
+		<input class="btn" name="null"
+			value="Enregistre un trajet" tabindex="5" type="submit" />
+			<br/><br/>
+	</a>
+	Pour voir la liste des trajets proposés: <br/>
+	<a th:href="@{/listeTrajet}">
+		<input class="btn" name="null"
+			value="Liste des trajets" tabindex="5" type="submit" />
+	</a>
+	<br/><br/>
+	<a th:href="@{/}">
+		<input class="btn" name="null"
+			value="Accueil" tabindex="5" type="submit" />
+	</a>
+	
+</div>
+</body>
+</html>
