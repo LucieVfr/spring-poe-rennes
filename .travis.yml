@@ -1,3 +1,4 @@
 language: java
 jdk:
 - oraclejdk8
+install: mvn clean compile sonar:sonar -Dsonar.organization=iakoi-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=a3905d548556fafd4a91a6f98f536eb875d2969c
