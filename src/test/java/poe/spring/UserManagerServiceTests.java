@@ -51,5 +51,4 @@ public class UserManagerServiceTests {
 		assertThat(user).isNull();
 
 	}
-
 }

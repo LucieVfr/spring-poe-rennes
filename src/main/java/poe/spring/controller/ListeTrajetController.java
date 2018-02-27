@@ -36,58 +36,48 @@ public class ListeTrajetController {
 	@GetMapping
 	public String list(@RequestParam(required=false) String villeDepart, @RequestParam(required=false) String stringIdConducteur, Model model) {
 		
-		List<Trajet> trajets = null;
-		if(stringIdConducteur == "0") {
-			trajets = (List<Trajet>) trajetManagerService.lister();
-		}
-		
-		else if (stringIdConducteur != "0") {	
-			long idConducteur = Long.parseLong(stringIdConducteur);		
-			trajets = trajetManagerService.listerTrajetConducteur(idConducteur);
-					
-		}
-		
-		
-		if (villeDepart != "0") {
-			for (Trajet trajet : trajets) {
-				if (trajet.getVilleDepart().equals(villeDepart) == false) {
-					trajets.remove(trajet);
-				}				
-			}
-			
-			//trajets =	trajetRepository.rechercherParVilleDepart('%' + villeDepart + '%');
-		}
-		
-		 else {
-			
-			//trajets = (List<Trajet>) trajetManagerService.lister();
-
-
-		}
-		
-		
-		
-		model.addAttribute("trajets", trajets);
+//		List<Trajet> trajets = null;
+//		if(stringIdConducteur == "0") {
+//			trajets = (List<Trajet>) trajetManagerService.lister();
+//		}
+//		
+//		else if (stringIdConducteur != "0") {	
+//			long idConducteur = Long.parseLong(stringIdConducteur);		
+//			trajets = trajetManagerService.listerTrajetConducteur(idConducteur);
+//					
+//		}
+//		
+//		
+//		if (villeDepart != "0") {
+//			trajets = (List<Trajet>) trajetManagerService.lister();
+//				}			
+//		 else {
+//			 trajets =	trajetRepository.rechercherParVilleDepart('%' + villeDepart + '%');
+//		}
+//		
+//		
+//		
+//		model.addAttribute("trajets", trajets);
 		List<User> users = (List<User>) userManagerService.lister();
 		model.addAttribute("users", users);
-		
-		
-		List<Trajet> toutLesTrajets = (List<Trajet>) trajetManagerService.lister();
-		model.addAttribute("toutLesTrajets", toutLesTrajets);
+//		
+//		
+		List<Trajet>trajets = (List<Trajet>) trajetManagerService.lister();
+		model.addAttribute("trajets", trajets);
 		
 		return "/listeTrajet";
 	}
 	
-	public List<Trajet> search(String town) {
-		List<Trajet> trajets = new ArrayList<>();
-
-		if (town != null) {
-			trajets = trajetRepository.findByVilleDepartLikeIgnoreCaseOrVilleArriveeLikeIgnoreCase("%" + town + "%", "%" + town + "%");
-		} else {
-			trajets = (List<Trajet>) trajetRepository.findAll();
-		}
-
-		return trajets;
-}
+//	public List<Trajet> search(String town) {
+//		List<Trajet> trajets = new ArrayList<>();
+//
+//		if (town != null) {
+//			trajets = trajetRepository.findByVilleDepartLikeIgnoreCaseOrVilleArriveeLikeIgnoreCase("%" + town + "%", "%" + town + "%");
+//		} else {
+//			trajets = (List<Trajet>) trajetRepository.findAll();
+//		}
+//
+//		return trajets;
+//}
 	
 }

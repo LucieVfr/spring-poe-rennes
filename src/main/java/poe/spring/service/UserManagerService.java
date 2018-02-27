@@ -1,6 +1,5 @@
 package poe.spring.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,10 @@ import poe.spring.check.LoginUnique;
 import poe.spring.domain.User;
 import poe.spring.repository.UserRepository;
 
-@Service // service Spring
+@Service
+
+
+
 public class UserManagerService {
 
 	@Autowired
@@ -70,6 +72,7 @@ public class UserManagerService {
 		User user = userReposiroty.findOne(id);
 		return user;
 	}
+
 	
 	public User chercherLog(String login) {
 		User user = null;

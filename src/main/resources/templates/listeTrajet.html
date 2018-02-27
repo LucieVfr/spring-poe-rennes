@@ -29,14 +29,24 @@
               Ville de départ:              
         <select name="villeDepart" id="villeDepart">
            <option value="0"><span th:text="Toutes"/></option>		
-           <option th:each="trajet : ${toutLesTrajets}" th:value="${trajet.villeDepart}"><span th:text="${trajet.villeDepart}"/></option>
+           <option th:each="trajet : ${tSrajets}" th:value="${trajet.villeDepart}"><span th:text="${trajet.villeDepart}"/></option>
        </select>			
 		<br />
+		
+		              Ville d'arrivée:              
+        <select name="villeArrivee" id="villeArrivee">
+           <option value="0"><span th:text="Toutes"/></option>		
+           <option th:each="trajet : ${trajets}" th:value="${trajet.villeArrivee}"><span th:text="${trajet.villeArrivee}"/></option>
+       </select>			
+		<br />
+		
+		
+		
+		
+		
 		<input class="btn" name="listerTrajets"
 			value="Lancer la recherche" tabindex="5" type="submit" />
-		</form>	
-	
-	
+		</form>		
 	</div>
 
 

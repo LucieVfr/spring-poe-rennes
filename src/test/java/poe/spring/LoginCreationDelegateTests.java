@@ -1,4 +1,3 @@
-
 package poe.spring;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -76,5 +75,4 @@ public class LoginCreationDelegateTests {
 		assertThat(userCorrect.getId()).isNotNull();	
 				
 	}
-
 }

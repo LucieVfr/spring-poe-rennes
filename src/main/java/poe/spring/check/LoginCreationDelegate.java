@@ -1,11 +1,9 @@
-
 package poe.spring.check;
 
 import org.springframework.stereotype.Service;
 
 @Service
 public class LoginCreationDelegate {
-
 
 	public boolean loginSize(String login) {
 		Boolean loginSizeCorrect = false;
@@ -19,9 +17,12 @@ public class LoginCreationDelegate {
 
 	public boolean loginAccepted(String login) {
 		Boolean loginAccepted = true;
+
 		if ("toto".equals(login) || "tata".equals(login) || "titi".equals(login) || "rechercherParVilleDepart".equals(login) ) {
+
 			loginAccepted = false;
 		}
 		return loginAccepted;
 	}
+
 }
