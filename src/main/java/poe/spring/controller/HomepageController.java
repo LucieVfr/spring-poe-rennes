@@ -13,4 +13,10 @@ public class HomepageController {
         model.addAttribute("message", "Bienvenue!");
         return "index";
     }
+    @GetMapping("/login")
+    public String login(Model model) {        
+        return "/login";
+    }
+    
+    
 }

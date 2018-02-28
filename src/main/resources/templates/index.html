@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Ma page Thymeleaf</title>
-<link rel="stylesheet" href="/style.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
 </head>
 <body>
 
@@ -32,6 +32,11 @@
 	<a th:href="@{/listeTrajet}">
 		<input class="btn" name="null"
 			value="Liste des trajets" tabindex="5" type="submit" />
+	</a><br/><br/>
+	Pour se logger: <br/>
+	<a th:href="@{/login}">
+		<input class="btn" name="null"
+			value="Je me connecte" tabindex="5" type="submit" />
 	</a>
 	</div>
 </body>

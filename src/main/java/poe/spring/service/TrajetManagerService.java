@@ -80,7 +80,8 @@ public class TrajetManagerService {
 		}
 
 		return trajets;
-}
+	}
+
 
 
 

@@ -33,8 +33,20 @@ public class ListeTrajetController {
 	@Autowired
 	TrajetRepository trajetRepository;
 	
-	@GetMapping
-	public String list(@RequestParam(required=false) String villeDepart, @RequestParam(required=false) String stringIdConducteur, Model model) {
+//	@GetMapping
+//	public String list(@RequestParam(required=false) String villeDepart, @RequestParam(required=false) String stringIdConducteur, Model model) {
+//		
+//		List<Trajet> trajetsSel = trajetManagerService.lister();
+//		
+//		if(stringIdConducteur == "0") {
+//			for (Trajet trajet : trajetsSel) {
+//				if (trajet.getUser().equals(stringIdConducteur) == false) {
+//					
+//					trajetsSel.remove(trajet);
+//				}
+//			}
+//			
+//		}
 		
 //		List<Trajet> trajets = null;
 //		if(stringIdConducteur == "0") {
@@ -55,17 +67,31 @@ public class ListeTrajetController {
 //			 trajets =	trajetRepository.rechercherParVilleDepart('%' + villeDepart + '%');
 //		}
 //		
+//		model.addAttribute("trajetsSel", trajetsSel);
 //		
-//		
+//		List<User> users = (List<User>) userManagerService.lister();
+//		model.addAttribute("users", users);
+//			
+//		List<Trajet>trajets = (List<Trajet>) trajetManagerService.lister();
 //		model.addAttribute("trajets", trajets);
-		List<User> users = (List<User>) userManagerService.lister();
-		model.addAttribute("users", users);
 //		
-//		
-		List<Trajet>trajets = (List<Trajet>) trajetManagerService.lister();
+//		return "/listeTrajet";
+	@GetMapping
+	public String list(@RequestParam(required = false) Long stringIdConducteur, @RequestParam(required = false) String villeDepart, Model model) {
+
+		List<Trajet> trajets = trajetManagerService.search(villeDepart);
+
 		model.addAttribute("trajets", trajets);
 		
+		
+		
+		List<User> users = (List<User>) userManagerService.lister();
+    	model.addAttribute("users", users);
+
 		return "/listeTrajet";
+
+
+
 	}
 	
 //	public List<Trajet> search(String town) {

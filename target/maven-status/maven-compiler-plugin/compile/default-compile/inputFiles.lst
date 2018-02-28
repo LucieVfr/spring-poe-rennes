@@ -1,4 +1,6 @@
+C:\Users\Formation\git\SpringEclipse\Springboot\src\main\java\poe\spring\WebSecurityConfig.java
 C:\Users\Formation\git\SpringEclipse\Springboot\src\main\java\poe\spring\api\GreetingController.java
+C:\Users\Formation\git\SpringEclipse\Springboot\src\main\java\poe\spring\form\LoginForm.java
 C:\Users\Formation\git\SpringEclipse\Springboot\src\main\java\poe\spring\Greeting.java
 C:\Users\Formation\git\SpringEclipse\Springboot\src\main\java\poe\spring\domain\Trajet.java
 C:\Users\Formation\git\SpringEclipse\Springboot\src\main\java\poe\spring\check\LoginUnique.java
@@ -16,4 +18,5 @@ C:\Users\Formation\git\SpringEclipse\Springboot\src\main\java\poe\spring\reposit
 C:\Users\Formation\git\SpringEclipse\Springboot\src\main\java\poe\spring\controller\TrajetController.java
 C:\Users\Formation\git\SpringEclipse\Springboot\src\main\java\poe\spring\api\UserRestController.java
 C:\Users\Formation\git\SpringEclipse\Springboot\src\main\java\poe\spring\check\LoginCreationDelegate.java
+C:\Users\Formation\git\SpringEclipse\Springboot\src\main\java\poe\spring\exception\DuplicateLoginBusinessException.java
 C:\Users\Formation\git\SpringEclipse\Springboot\src\main\java\poe\spring\controller\ListeTrajetController.java

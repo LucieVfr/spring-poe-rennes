@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Liste trajets</title>
-<link rel="stylesheet" href="/style.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
 </head>
 <body>
 
@@ -29,7 +29,7 @@
               Ville de départ:              
         <select name="villeDepart" id="villeDepart">
            <option value="0"><span th:text="Toutes"/></option>		
-           <option th:each="trajet : ${tSrajets}" th:value="${trajet.villeDepart}"><span th:text="${trajet.villeDepart}"/></option>
+           <option th:each="trajet : ${trajets}" th:value="${trajet.villeDepart}"><span th:text="${trajet.villeDepart}"/></option>
        </select>			
 		<br />
 		
